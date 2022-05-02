@@ -2,17 +2,22 @@ const express = require('express');
 const chalk = require('chalk');
 const debug = require('debug')('app');
 const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(morgan('combined'));
+app.use(express.static(path.join(__dirname, '/public/')));
+
+app.set("views", "./src/views");
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.send('hello world');
+    res.render("index", { username: "Arnon", customers: ['test', 'hello', 'asdf'] });
 });
 
-app.listen(port, () => {
-    // console.log('listening on port ' + chalk.green(port));
-    debug('listening on port ' + chalk.green(port));
+app.listen(PORT, () => {
+    // console.log('listening on PORT ' + chalk.green(PORT));
+    debug('listening on port ' + chalk.green(PORT));
 })
