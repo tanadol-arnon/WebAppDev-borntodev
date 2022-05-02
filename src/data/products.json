@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Camera",
+        "description": "use to take a photo",
+        "price": "$4000"
+    },
+    {
+        "id": 2,
+        "title": "SD Card",
+        "description": "use to store a photo",
+        "price": "$90"
+    },
+    {
+        "id": 3,
+        "title": "Tripot",
+        "description": "make camera stable",
+        "price": "$1000"
+    },
+    {
+        "id": 4,
+        "title": "Battery",
+        "description": "make camera still alive",
+        "price": "$300"
+    },
+    {
+        "id": 5,
+        "title": "Lens",
+        "description": "make camera looks cool",
+        "price": "$10000"
+    }
+]
